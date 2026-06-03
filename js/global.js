@@ -6,7 +6,7 @@
 
 // ⚠️ IMPORTANT: Replace with your Google Apps Script Web App URL
 // After deploying code.gs, paste the URL here
-const API_URL = "https://script.google.com/macros/s/AKfycbxU_YjxiEti7bFPDa7kBs7x8vqBmAf8ew1tHZTBD_6dUEUQ0u561Mla24mR9CkVinyLYg/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzjxoRTkjN6SZjZT48Bqv97nf8ebE0E8BjC2V6MGHdIzd62g8gtrU8snO_He2-F6j8KwA/exec";
 
 // ============================================================
 // NAVBAR HTML - injected into all pages
