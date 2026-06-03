@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results & Achievements – Sulekh Convent School</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/results.css" />
+</head>
+<body>
+<div id="navbar-container"></div>
+
+<section class="page-banner">
+  <div class="container">
+    <h1>Results & Achievements</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Results</span></div>
+  </div>
+</section>
+
+<!-- Results -->
+<section class="section" id="results">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Board Results</span>
+      <h2>Academic Results</h2>
+      <p>Our students consistently achieve outstanding results in board examinations.</p>
+    </div>
+    <button class="btn-add-new" onclick="openAddResultModal()"><i class="fas fa-plus"></i> Add Result</button>
+    <div class="results-grid" id="resultsGrid">
+      <div class="loader"><div class="spinner"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Achievements -->
+<section class="section section-alt" id="achievements">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Pride</span>
+      <h2>School Achievements</h2>
+    </div>
+    <button class="btn-add-new" onclick="openAddAchModal()"><i class="fas fa-plus"></i> Add Achievement</button>
+    <div class="achievements-full-grid" id="achFullGrid">
+      <div class="loader"><div class="spinner"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Toppers -->
+<section class="section" id="toppers">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Hall of Fame</span>
+      <h2>Our Toppers</h2>
+    </div>
+    <div class="toppers-grid" id="toppersGrid">
+      <div class="loader"><div class="spinner"></div></div>
+    </div>
+    <button class="btn-add-new" onclick="openAddTopperModal()"><i class="fas fa-plus"></i> Add Topper</button>
+  </div>
+</section>
+
+<div id="footer-container"></div>
+<script src="js/global.js"></script>
+<script src="js/results.js"></script>
+</body>
+</html>

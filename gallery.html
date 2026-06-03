@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery – Sulekh Convent School, Bareilly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+</head>
+<body>
+<div id="navbar-container"></div>
+
+<section class="page-banner">
+  <div class="container">
+    <h1>Photo Gallery</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Gallery</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Memories</span>
+      <h2>Glimpses of School Life</h2>
+      <p>Events, achievements, sports, annual day, and everyday moments from Sulekh Convent School.</p>
+    </div>
+
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-cat="all">All Photos</button>
+      <button class="filter-btn" data-cat="Events">Events</button>
+      <button class="filter-btn" data-cat="Sports">Sports</button>
+      <button class="filter-btn" data-cat="Annual Day">Annual Day</button>
+      <button class="filter-btn" data-cat="Infrastructure">Infrastructure</button>
+      <button class="filter-btn" data-cat="Academics">Academics</button>
+      <button class="filter-btn" data-cat="Other">Other</button>
+    </div>
+
+    <button class="btn-add-new" onclick="openAddPhotoModal()"><i class="fas fa-plus"></i> Add Photo</button>
+
+    <div class="gallery-masonry" id="galleryGrid">
+      <div class="loader"><div class="spinner"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+  <button class="lb-prev" onclick="lightboxNav(-1)"><i class="fas fa-chevron-left"></i></button>
+  <button class="lb-next" onclick="lightboxNav(1)"><i class="fas fa-chevron-right"></i></button>
+  <div class="lb-content">
+    <img id="lbImg" src="" alt="" />
+    <div class="lb-caption" id="lbCaption"></div>
+  </div>
+</div>
+
+<div id="footer-container"></div>
+<script src="js/global.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>

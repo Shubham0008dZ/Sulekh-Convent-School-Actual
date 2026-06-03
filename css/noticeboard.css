@@ -1,0 +1,160 @@
+/* ============================================================
+   SULEKH CONVENT SCHOOL - Notice Board CSS
+   File: css/noticeboard.css
+   Note: .filter-btn and .notice-cat-filters defined in global.css
+   ============================================================ */
+
+.notice-toolbar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.notice-search {
+  position: relative;
+  flex: 1;
+  min-width: 220px;
+}
+
+.notice-search i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+}
+
+.notice-search input {
+  width: 100%;
+  padding: 10px 14px 10px 40px;
+  border: 1.5px solid var(--border);
+  border-radius: 25px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+  transition: var(--transition);
+  background: var(--white);
+}
+
+.notice-search input:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(42,82,152,0.1);
+}
+
+.notice-cat-filters {
+  justify-content: flex-start;
+}
+
+/* Notice List */
+.notice-full-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--primary-light);
+  box-shadow: 0 3px 15px var(--shadow);
+  margin-bottom: 16px;
+  transition: var(--transition);
+}
+
+.notice-full-card:hover {
+  box-shadow: 0 8px 30px var(--shadow-strong);
+  transform: translateX(4px);
+}
+
+.notice-full-card.important { border-left-color: #e74c3c; }
+
+.nf-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.nf-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.nf-important-badge {
+  background: #e74c3c;
+  color: var(--white);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.nf-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  flex-shrink: 0;
+}
+
+.nf-meta span { display: flex; align-items: center; gap: 5px; }
+
+.nf-category {
+  display: inline-block;
+  background: var(--light-blue);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.notice-full-card.important .nf-category { background: #fde8e8; color: #c53030; }
+
+.nf-content {
+  color: var(--text-mid);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.nf-attachment {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 14px;
+  background: var(--light-blue);
+  color: var(--primary);
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nf-attachment:hover { background: var(--primary); color: var(--white); }
+
+.no-notices {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--text-light);
+}
+
+.no-notices i { font-size: 3rem; display: block; margin-bottom: 16px; opacity: 0.3; }
+
+@media (max-width: 768px) {
+  .notice-toolbar { flex-direction: column; align-items: stretch; }
+  .nf-top { flex-direction: column; gap: 8px; }
+  .nf-meta { flex-wrap: wrap; gap: 10px; }
+}

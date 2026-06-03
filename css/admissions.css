@@ -1,0 +1,247 @@
+/* ============================================================
+   SULEKH CONVENT SCHOOL - Admissions CSS
+   File: css/admissions.css
+   ============================================================ */
+
+.admission-alert {
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  padding: 14px 0;
+  text-align: center;
+}
+
+.admission-alert .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  font-size: 0.95rem;
+}
+
+.admission-alert i { font-size: 1.1rem; }
+
+/* Steps */
+.process-steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.step-item {
+  flex: 1;
+  min-width: 200px;
+  max-width: 240px;
+  text-align: center;
+  padding: 28px 20px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: var(--transition);
+}
+
+.step-item:hover { transform: translateY(-6px); box-shadow: 0 12px 35px var(--shadow-strong); }
+
+.step-num {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.step-content h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.step-content p { font-size: 0.84rem; color: var(--text-light); line-height: 1.7; }
+
+.step-arrow {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  color: var(--primary-light);
+  font-size: 1.2rem;
+  margin-top: 28px;
+}
+
+/* Eligibility */
+.eligibility-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.elig-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px 20px;
+  text-align: center;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: var(--transition);
+}
+
+.elig-card:hover { transform: translateY(-5px); box-shadow: 0 12px 35px var(--shadow-strong); }
+
+.elig-icon {
+  width: 54px;
+  height: 54px;
+  background: var(--light-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  font-size: 1.4rem;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.elig-card:hover .elig-icon {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: var(--white);
+}
+
+.elig-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.elig-card p { font-size: 0.83rem; color: var(--text-light); line-height: 1.6; }
+
+/* Documents */
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.doc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  transition: var(--transition);
+}
+
+.doc-item:hover { border-color: var(--primary-light); box-shadow: 0 4px 15px var(--shadow); }
+.doc-item i { color: var(--primary); margin-top: 2px; flex-shrink: 0; }
+
+/* Enquiry Form */
+.enquiry-wrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.enquiry-form-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.enq-success {
+  background: #f0fff4;
+  border: 1px solid #9ae6b4;
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  color: #276749;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.enquiry-info {
+  background: var(--primary-dark);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: sticky;
+  top: 100px;
+}
+
+.enquiry-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--accent-light);
+  margin-bottom: 24px;
+}
+
+.enq-info-item {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.enq-info-item i {
+  color: var(--accent);
+  font-size: 1rem;
+  margin-top: 3px;
+  width: 18px;
+  flex-shrink: 0;
+}
+
+.enq-info-item strong {
+  display: block;
+  color: var(--white);
+  font-size: 0.85rem;
+  margin-bottom: 3px;
+}
+
+.enq-info-item span {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.83rem;
+}
+
+@media (max-width: 1024px) {
+  .eligibility-grid { grid-template-columns: repeat(3, 1fr); }
+  .docs-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .process-steps { flex-direction: column; align-items: center; }
+  .step-arrow { transform: rotate(90deg); margin: 0; }
+  .eligibility-grid { grid-template-columns: 1fr 1fr; }
+  .enquiry-wrapper { grid-template-columns: 1fr; }
+  .enquiry-info { position: static; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .eligibility-grid { grid-template-columns: 1fr; }
+  .docs-grid { grid-template-columns: 1fr; }
+}

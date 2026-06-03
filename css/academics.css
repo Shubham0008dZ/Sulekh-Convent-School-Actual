@@ -1,0 +1,283 @@
+/* ============================================================
+   SULEKH CONVENT SCHOOL - Academics CSS
+   File: css/academics.css
+   ============================================================ */
+
+/* Curriculum Overview */
+.curriculum-overview {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+}
+
+.curr-highlight {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: var(--transition);
+}
+
+.curr-highlight:hover { transform: translateY(-4px); box-shadow: 0 10px 30px var(--shadow-strong); }
+
+.curr-highlight > i {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-top: 4px;
+  flex-shrink: 0;
+  width: 36px;
+}
+
+.curr-highlight h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--primary-dark);
+  margin-bottom: 6px;
+}
+
+.curr-highlight p { font-size: 0.875rem; color: var(--text-light); line-height: 1.7; }
+
+/* Tabs */
+.classes-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 2px solid var(--border);
+  background: var(--white);
+  color: var(--text-mid);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.tab-btn:hover { border-color: var(--primary-light); color: var(--primary); }
+
+.tab-btn.active {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: var(--white);
+  border-color: transparent;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.class-detail-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.class-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--primary-dark);
+  margin-bottom: 14px;
+}
+
+.class-info p { color: var(--text-mid); line-height: 1.8; font-size: 0.95rem; margin-bottom: 16px; }
+
+.class-features { display: flex; flex-direction: column; gap: 10px; }
+
+.class-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--text-mid);
+}
+
+.class-features li i { color: var(--primary-light); }
+
+.class-subjects h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--primary-dark);
+  margin-bottom: 14px;
+}
+
+.subject-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.subject-tags span {
+  background: var(--light-blue);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+.stream-cards { display: flex; flex-direction: column; gap: 12px; margin-top: 6px; }
+
+.stream-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+}
+
+.stream-card i { font-size: 1.3rem; }
+.stream-card span { font-weight: 700; font-size: 0.9rem; color: var(--text-dark); }
+.stream-card small { color: var(--text-light); font-size: 0.78rem; margin-left: auto; }
+
+.stream-card.science { border-color: #bee3f8; background: #ebf8ff; }
+.stream-card.science i { color: #2b6cb0; }
+.stream-card.commerce { border-color: #c6f6d5; background: #f0fff4; }
+.stream-card.commerce i { color: #276749; }
+.stream-card.arts { border-color: #fed7e2; background: #fff5f7; }
+.stream-card.arts i { color: #97266d; }
+
+/* Subjects Grid */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.subject-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px 12px;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  cursor: default;
+}
+
+.subject-card:hover {
+  border-color: var(--primary-light);
+  box-shadow: 0 6px 20px var(--shadow);
+  transform: translateY(-3px);
+}
+
+.subject-card i {
+  font-size: 1.6rem;
+  color: var(--primary-light);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.subject-card span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-mid);
+}
+
+/* Activities */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.activity-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 30px 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.activity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px var(--shadow-strong);
+}
+
+.act-img {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  font-size: 1.6rem;
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.activity-card:hover .act-img { background: linear-gradient(135deg, var(--accent), var(--accent-light)); color: var(--primary-dark); }
+
+.activity-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.activity-card p { font-size: 0.875rem; color: var(--text-light); line-height: 1.7; }
+
+/* Labs */
+.labs-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+}
+
+.lab-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: var(--transition);
+}
+
+.lab-card:hover { transform: translateY(-6px); box-shadow: 0 14px 40px var(--shadow-strong); }
+
+.lab-card img { width: 100%; height: 200px; object-fit: cover; }
+
+.lab-info { padding: 22px; }
+
+.lab-info h4 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.lab-info p { font-size: 0.875rem; color: var(--text-light); line-height: 1.7; }
+
+@media (max-width: 1024px) {
+  .curriculum-overview { grid-template-columns: 1fr; }
+  .subjects-grid { grid-template-columns: repeat(4, 1fr); }
+  .activities-grid { grid-template-columns: 1fr 1fr; }
+  .labs-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .class-detail-grid { grid-template-columns: 1fr; gap: 24px; }
+  .subjects-grid { grid-template-columns: repeat(3, 1fr); }
+  .activities-grid { grid-template-columns: 1fr; }
+  .labs-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .subjects-grid { grid-template-columns: repeat(2,1fr); }
+}

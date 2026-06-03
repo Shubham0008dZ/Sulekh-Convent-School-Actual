@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fee Structure – Sulekh Convent School, Bareilly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/fee.css" />
+</head>
+<body>
+<div id="navbar-container"></div>
+
+<section class="page-banner">
+  <div class="container">
+    <h1>Fee Structure</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>›</span><span>Fee Structure</span>
+    </div>
+  </div>
+</section>
+
+<!-- Fee Notice -->
+<div class="fee-notice-bar">
+  <div class="container">
+    <i class="fas fa-info-circle"></i>
+    <span id="feeNoticeText" data-editable="feeNotice">Fee Structure for Session 2025–26. Fee must be paid by the due date to avoid late charges.</span>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Fee Structure</span>
+      <h2>Academic Year 2025–26</h2>
+      <p>Transparent and affordable fee structure for all classes.</p>
+    </div>
+
+    <!-- Session Tabs -->
+    <div class="fee-session-tabs" id="feeSessionTabs">
+      <!-- Dynamically filled -->
+    </div>
+
+    <button class="btn-add-new" onclick="openAddFeeModal()"><i class="fas fa-plus"></i> Add Fee Entry</button>
+
+    <!-- Fee Table -->
+    <div class="fee-table-wrap" id="feeTableWrap">
+      <div class="loader"><div class="spinner"></div></div>
+    </div>
+
+    <!-- Fee Notes -->
+    <div class="fee-notes-box">
+      <h4><i class="fas fa-clipboard-list"></i> Important Notes</h4>
+      <ul id="feeNotesList">
+        <li data-editable="feeNote1"><i class="fas fa-circle"></i> Fee once paid is non-refundable except under special circumstances.</li>
+        <li data-editable="feeNote2"><i class="fas fa-circle"></i> Late fee of ₹50 per day will be charged after due date.</li>
+        <li data-editable="feeNote3"><i class="fas fa-circle"></i> Fee can be paid by cash, DD or online transfer at school office.</li>
+        <li data-editable="feeNote4"><i class="fas fa-circle"></i> For fee concession, apply to the Principal with supporting documents.</li>
+        <li data-editable="feeNote5"><i class="fas fa-circle"></i> Annual charges include: tuition, computer, library, sports, and miscellaneous.</li>
+      </ul>
+      <button class="btn-add-new" onclick="openAddNoteModal()"><i class="fas fa-plus"></i> Add Note</button>
+    </div>
+
+    <!-- Payment Modes -->
+    <div class="payment-modes">
+      <h3>Payment Methods</h3>
+      <div class="payment-grid">
+        <div class="pay-card">
+          <i class="fas fa-university"></i>
+          <h4>Bank Transfer</h4>
+          <p data-editable="bankDetails">Account details available at school office.</p>
+        </div>
+        <div class="pay-card">
+          <i class="fas fa-money-bill-wave"></i>
+          <h4>Cash / DD</h4>
+          <p>Pay at school office during working hours (Mon–Sat, 9AM–2PM).</p>
+        </div>
+        <div class="pay-card">
+          <i class="fas fa-qrcode"></i>
+          <h4>UPI / Online</h4>
+          <p data-editable="upiDetails">UPI ID available at school office.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-container"></div>
+<script src="js/global.js"></script>
+<script src="js/fee.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Sulekh Convent School, Bareilly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+<div id="navbar-container"></div>
+
+<!-- Page Banner -->
+<section class="page-banner">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>›</span><span>Contact Us</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT INFO CARDS
+     ============================================================ -->
+<section class="section">
+  <div class="container">
+
+    <div class="contact-info-grid">
+      <div class="contact-info-card">
+        <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h4>Our Address</h4>
+        <p id="contactAddress" data-editable="Address">Bareilly, Uttar Pradesh – 243001</p>
+        <a href="https://maps.app.goo.gl/VgKqLEx6uSNLLjwo6" target="_blank" class="ci-link">
+          <i class="fas fa-directions"></i> Get Directions
+        </a>
+      </div>
+
+      <div class="contact-info-card">
+        <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+        <h4>Call Us</h4>
+        <p id="contactPhone1" data-editable="Phone1">+91 XXXXXXXXXX</p>
+        <p id="contactPhone2" data-editable="Phone2" style="margin-top:4px;font-size:0.9rem;color:var(--text-light);"></p>
+        <a href="tel:" id="contactPhoneLink" class="ci-link"><i class="fas fa-phone"></i> Call Now</a>
+      </div>
+
+      <div class="contact-info-card">
+        <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+        <h4>Email Us</h4>
+        <p id="contactEmail" data-editable="Email">info@sulekhconvent.edu.in</p>
+        <a href="mailto:" id="contactEmailLink" class="ci-link">
+          <i class="fas fa-paper-plane"></i> Send Email
+        </a>
+      </div>
+
+      <div class="contact-info-card">
+        <div class="ci-icon"><i class="fas fa-clock"></i></div>
+        <h4>Office Hours</h4>
+        <p id="contactTiming" data-editable="Timing">Mon – Sat: 7:30 AM – 2:00 PM</p>
+        <p style="font-size:0.82rem;color:var(--text-light);margin-top:6px;">Sunday & Holidays: Closed</p>
+        <span class="ci-link" style="cursor:default;color:var(--primary-light);">
+          <i class="fas fa-calendar-check"></i> School Timing
+        </span>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         CONTACT FORM + MAP
+         ============================================================ -->
+    <div class="contact-main-grid">
+
+      <!-- Contact Form -->
+      <div class="contact-form-card">
+        <h3><i class="fas fa-comments"></i> Send Us a Message</h3>
+        <p style="color:var(--text-light);font-size:0.9rem;margin-bottom:24px;">
+          Have a query? We'll get back to you within 24 working hours.
+        </p>
+
+        <div class="cf-row">
+          <div class="form-group">
+            <label><i class="fas fa-user"></i> Your Name *</label>
+            <input type="text" id="cfName" placeholder="Full name" />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-phone"></i> Mobile Number *</label>
+            <input type="tel" id="cfPhone" placeholder="+91 XXXXXXXXXX" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label><i class="fas fa-envelope"></i> Email Address</label>
+          <input type="email" id="cfEmail" placeholder="your@email.com" />
+        </div>
+
+        <div class="form-group">
+          <label><i class="fas fa-tag"></i> Subject</label>
+          <select id="cfSubject">
+            <option value="">Select Subject</option>
+            <option>Admission Enquiry</option>
+            <option>Fee Related</option>
+            <option>Academic Query</option>
+            <option>Transport Enquiry</option>
+            <option>General Enquiry</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label><i class="fas fa-comment-alt"></i> Message *</label>
+          <textarea id="cfMessage" rows="5" placeholder="Apna message yahan likhein..."></textarea>
+        </div>
+
+        <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="submitContactForm()">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+
+        <div id="cfSuccess" class="cf-success" style="display:none;">
+          <i class="fas fa-check-circle"></i> Message bhej diya gaya! Hum jald hi contact karenge.
+        </div>
+      </div>
+
+      <!-- Map + School Details -->
+      <div class="contact-right">
+        <!-- Google Map Embed -->
+        <div class="map-container">
+          <iframe
+            id="mapEmbed"
+            src="https://maps.google.com/maps?q=Bareilly,Uttar+Pradesh&z=14&output=embed"
+            width="100%"
+            height="300"
+            style="border:0;border-radius:var(--radius-lg);"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- Quick Info -->
+        <div class="quick-info-box">
+          <h4><i class="fas fa-school"></i> School Information</h4>
+          <div class="qi-item">
+            <span class="qi-label">School Name</span>
+            <span class="qi-val">Sulekh Convent School</span>
+          </div>
+          <div class="qi-item">
+            <span class="qi-label">Affiliation</span>
+            <span class="qi-val" id="contactAffiliation" data-editable="Affiliation">CBSE / UP Board</span>
+          </div>
+          <div class="qi-item">
+            <span class="qi-label">Affiliation No.</span>
+            <span class="qi-val" id="contactAffNo" data-editable="AffiliationNumber">XXXXXXXXXXXX</span>
+          </div>
+          <div class="qi-item">
+            <span class="qi-label">Principal</span>
+            <span class="qi-val" id="contactPrincipal" data-editable="Principal">Principal Name</span>
+          </div>
+          <div class="qi-item">
+            <span class="qi-label">Established</span>
+            <span class="qi-val" id="contactEst" data-editable="EstablishedYear">XXXX</span>
+          </div>
+          <div class="qi-item">
+            <span class="qi-label">Website</span>
+            <span class="qi-val" id="contactWebsite" data-editable="Website">www.sulekhconvent.edu.in</span>
+          </div>
+        </div>
+
+        <!-- Social Links (hidden social btns, still loaded via JS for footer) -->
+        <a href="#" id="contactFb" style="display:none;"></a>
+        <a href="#" id="contactYt" style="display:none;"></a>
+        <a href="#" id="contactTw" style="display:none;"></a>
+      </div>
+    </div>
+
+    <!-- Admin: Edit Contact Info button -->
+    <div id="adminContactEditBtn" style="display:none;text-align:center;margin-top:30px;">
+      <button class="btn btn-primary" onclick="openEditContactModal()">
+        <i class="fas fa-edit"></i> Edit All Contact Information
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+
+<div id="footer-container"></div>
+<script src="js/global.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

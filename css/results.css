@@ -1,0 +1,227 @@
+/* ============================================================
+   SULEKH CONVENT SCHOOL - Results CSS
+   File: css/results.css
+   ============================================================ */
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.result-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: var(--transition);
+}
+
+.result-card:hover { transform: translateY(-5px); box-shadow: 0 14px 40px var(--shadow-strong); }
+
+.result-year {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.result-class {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.result-title {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  margin-bottom: 10px;
+}
+
+.result-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.result-highlights {
+  background: var(--off-white);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  font-size: 0.83rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.result-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  color: var(--primary-light);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.result-link:hover { color: var(--primary); gap: 10px; }
+
+/* Achievements Full */
+.achievements-full-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.ach-full-card {
+  display: flex;
+  gap: 20px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: var(--transition);
+  align-items: flex-start;
+}
+
+.ach-full-card:hover { transform: translateY(-4px); box-shadow: 0 12px 35px var(--shadow-strong); }
+
+.ach-full-icon {
+  width: 54px;
+  height: 54px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--primary-dark);
+  flex-shrink: 0;
+}
+
+.ach-full-content h4 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--primary-dark);
+  margin-bottom: 6px;
+}
+
+.ach-full-content p { font-size: 0.875rem; color: var(--text-light); line-height: 1.7; }
+
+.ach-meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.ach-tag {
+  background: var(--light-blue);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
+/* Toppers */
+.toppers-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.topper-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px 16px;
+  text-align: center;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: var(--transition);
+  position: relative;
+}
+
+.topper-card:hover { transform: translateY(-5px); box-shadow: 0 12px 35px var(--shadow-strong); }
+
+.topper-rank {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topper-rank.gold { background: var(--accent); color: var(--primary-dark); }
+.topper-rank.silver { background: #adb5bd; }
+.topper-rank.bronze { background: #cd7f32; }
+
+.topper-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 12px;
+  border: 3px solid var(--accent);
+}
+
+.topper-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  font-size: 2rem;
+  color: var(--primary-light);
+  border: 3px solid var(--border);
+}
+
+.topper-name {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--primary-dark);
+  margin-bottom: 4px;
+}
+
+.topper-class {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.topper-marks {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--primary);
+  font-family: var(--font-heading);
+}
+
+@media (max-width: 1024px) {
+  .results-grid { grid-template-columns: 1fr 1fr; }
+  .toppers-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .results-grid { grid-template-columns: 1fr; }
+  .achievements-full-grid { grid-template-columns: 1fr; }
+  .toppers-grid { grid-template-columns: repeat(2, 1fr); }
+}

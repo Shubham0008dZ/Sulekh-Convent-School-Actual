@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard – Sulekh Convent School</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/admin-dashboard.css" />
+</head>
+<body class="dashboard-page">
+
+<!-- ============================================================
+     SIDEBAR
+     ============================================================ -->
+<aside class="dashboard-sidebar" id="dashSidebar">
+  <div class="sidebar-brand">
+    <div class="sb-logo">SC</div>
+    <div class="sb-title">
+      <span>Sulekh Convent</span>
+      <small>Admin Panel</small>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Main</div>
+    <a href="#overview"    class="snav-item active" data-section="overview">
+      <i class="fas fa-tachometer-alt"></i> Dashboard
+    </a>
+
+    <div class="nav-section-label">Content</div>
+    <a href="#sliders"     class="snav-item" data-section="sliders">
+      <i class="fas fa-images"></i> Home Sliders
+    </a>
+    <a href="#notices"     class="snav-item" data-section="notices">
+      <i class="fas fa-bell"></i> Notices
+      <span class="snav-badge" id="noticeCount">0</span>
+    </a>
+    <a href="#gallery"     class="snav-item" data-section="gallery">
+      <i class="fas fa-photo-video"></i> Gallery
+    </a>
+    <a href="#faculty"     class="snav-item" data-section="faculty">
+      <i class="fas fa-chalkboard-teacher"></i> Faculty
+    </a>
+    <a href="#results"     class="snav-item" data-section="results">
+      <i class="fas fa-trophy"></i> Results
+    </a>
+    <a href="#achievements" class="snav-item" data-section="achievements">
+      <i class="fas fa-medal"></i> Achievements
+    </a>
+    <a href="#fees"        class="snav-item" data-section="fees">
+      <i class="fas fa-rupee-sign"></i> Fee Structure
+    </a>
+
+    <div class="nav-section-label">Settings</div>
+    <a href="#contact"     class="snav-item" data-section="contact">
+      <i class="fas fa-phone-alt"></i> Contact Info
+    </a>
+    <a href="#users"       class="snav-item" data-section="users">
+      <i class="fas fa-users-cog"></i> Admin Users
+    </a>
+
+    <div class="sidebar-footer">
+      <a href="index.html" class="snav-item">
+        <i class="fas fa-globe"></i> View Website
+      </a>
+      <a href="#" class="snav-item logout-btn" onclick="adminLogout()">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </a>
+    </div>
+  </nav>
+</aside>
+
+<!-- ============================================================
+     MAIN CONTENT
+     ============================================================ -->
+<div class="dashboard-main" id="dashMain">
+
+  <!-- Top Bar -->
+  <header class="dash-topbar">
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="dash-page-title" id="dashPageTitle">Dashboard</div>
+    <div class="dash-topbar-right">
+      <div class="dash-admin-info">
+        <div class="dash-avatar"><i class="fas fa-user-shield"></i></div>
+        <div>
+          <span id="dashAdminName">Admin</span>
+          <small id="dashAdminRole">superadmin</small>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section class="dash-section active" id="section-overview">
+    <div class="dash-welcome">
+      <div class="dw-text">
+        <h2>Welcome back, <span id="welcomeName">Admin</span>! 👋</h2>
+        <p>Manage your school website content from this dashboard. All changes reflect on the live website instantly.</p>
+      </div>
+      <div class="dw-date" id="dashDate"></div>
+    </div>
+
+    <!-- Stats -->
+    <div class="dash-stats-grid">
+      <div class="dash-stat-card">
+        <div class="dsc-icon notices"><i class="fas fa-bell"></i></div>
+        <div class="dsc-info">
+          <span class="dsc-num" id="statNotices">—</span>
+          <span class="dsc-label">Total Notices</span>
+        </div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dsc-icon gallery"><i class="fas fa-images"></i></div>
+        <div class="dsc-info">
+          <span class="dsc-num" id="statGallery">—</span>
+          <span class="dsc-label">Gallery Photos</span>
+        </div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dsc-icon faculty"><i class="fas fa-chalkboard-teacher"></i></div>
+        <div class="dsc-info">
+          <span class="dsc-num" id="statFaculty">—</span>
+          <span class="dsc-label">Faculty Members</span>
+        </div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dsc-icon results"><i class="fas fa-trophy"></i></div>
+        <div class="dsc-info">
+          <span class="dsc-num" id="statResults">—</span>
+          <span class="dsc-label">Results Added</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="dash-quick-actions">
+      <h3>Quick Actions</h3>
+      <div class="qa-grid">
+        <button class="qa-btn" onclick="switchSection('notices')">
+          <i class="fas fa-plus-circle"></i> Add Notice
+        </button>
+        <button class="qa-btn" onclick="switchSection('gallery')">
+          <i class="fas fa-camera"></i> Add Photo
+        </button>
+        <button class="qa-btn" onclick="switchSection('faculty')">
+          <i class="fas fa-user-plus"></i> Add Faculty
+        </button>
+        <button class="qa-btn" onclick="switchSection('fees')">
+          <i class="fas fa-rupee-sign"></i> Update Fee
+        </button>
+        <button class="qa-btn" onclick="switchSection('results')">
+          <i class="fas fa-graduation-cap"></i> Add Result
+        </button>
+        <button class="qa-btn" onclick="switchSection('contact')">
+          <i class="fas fa-phone-alt"></i> Edit Contact
+        </button>
+      </div>
+    </div>
+
+    <!-- Recent Notices Preview -->
+    <div class="dash-card">
+      <div class="dash-card-header">
+        <h3><i class="fas fa-bell"></i> Recent Notices</h3>
+        <button class="btn-sm" onclick="switchSection('notices')">View All</button>
+      </div>
+      <div id="recentNoticesPreview"><div class="loader"><div class="spinner"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDERS ============ -->
+  <section class="dash-section" id="section-sliders">
+    <div class="dash-card">
+      <div class="dash-card-header">
+        <h3><i class="fas fa-images"></i> Home Page Sliders</h3>
+        <button class="btn btn-primary btn-sm-icon" onclick="openDashAddSliderModal()">
+          <i class="fas fa-plus"></i> Add Slide
+        </button>
+      </div>
+      <div id="slidersTable"><div class="loader"><div class="spinner"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ============ NOTICES ============ -->
+  <section class="dash-section" id="section-notices">
+    <div class="dash-card">
+      <div class="dash-card-header">
+        <h3><i class="fas fa-bell"></i> Notice Board Management</h3>
+        <button class="btn btn-primary btn-sm-icon" onclick="openDashAddNoticeModal()">
+          <i class="fas fa-plus"></i> Add Notice
+        </button>
+      </div>
+      <div id="noticesTable"><div class="loader"><div class="spinner"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="dash-section" id="section-gallery">
+    <div class="dash-card">
+      <div class="dash-card-header">
+        <h3><i class="fas fa-photo-video"></i> Gallery Management</h3>
+        <button class="btn btn-primary btn-sm-icon" onclick="openDashAddPhotoModal()">
+          <i class="fas fa-plus"></i> Add Photo
+        </button>
+      </div>
+      <div id="galleryTable"><div class="loader"><div class="spinner"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ============ FACULTY ============ -->
+  <section class="dash-section" id="section-faculty">
+    <div class="dash-card">
+      <div class="dash-card-header">
+        <h3><i class="fas fa-chalkboard-teacher"></i> Faculty Management</h3>
+        <button class="btn btn-primary btn-sm-icon" onclick="openDashAddFacultyModal()">
+          <i class="fas fa-plus"></i> Add Faculty
+        </button>
+      </div>
+      <div id="facultyTable"><div class="loader"><div class="spinner"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS ============ -->
+  <section class="dash-section" id="section-results">
+    <div class="dash-card">
+      <div class="dash-card-header">
+        <h3><i class="fas fa-trophy"></i> Results Management</h3>
+        <button class="btn btn-primary btn-sm-icon" onclick="openDashAddResultModal()">
+          <i class="fas fa-plus"></i> Add Result
+        </button>
+      </div>
+      <div id="resultsTable"><div class="loader"><div class="spinner"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ============ ACHIEVEMENTS ============ -->
+  <section class="dash-section" id="section-achievements">
+    <div class="dash-card">
+      <div class="dash-card-header">
+        <h3><i class="fas fa-medal"></i> Achievements Management</h3>
+        <button class="btn btn-primary btn-sm-icon" onclick="openDashAddAchModal()">
+          <i class="fas fa-plus"></i> Add Achievement
+        </button>
+      </div>
+      <div id="achievementsTable"><div class="loader"><div class="spinner"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ============ FEE STRUCTURE ============ -->
+  <section class="dash-section" id="section-fees">
+    <div class="dash-card">
+      <div class="dash-card-header">
+        <h3><i class="fas fa-rupee-sign"></i> Fee Structure Management</h3>
+        <button class="btn btn-primary btn-sm-icon" onclick="openDashAddFeeModal()">
+          <i class="fas fa-plus"></i> Add Fee Entry
+        </button>
+      </div>
+      <div id="feesTable"><div class="loader"><div class="spinner"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT INFO ============ -->
+  <section class="dash-section" id="section-contact">
+    <div class="dash-card">
+      <div class="dash-card-header">
+        <h3><i class="fas fa-phone-alt"></i> Contact Information</h3>
+        <button class="btn btn-primary btn-sm-icon" onclick="saveContactInfo()">
+          <i class="fas fa-save"></i> Save Changes
+        </button>
+      </div>
+      <div class="contact-edit-form" id="contactEditGrid">
+        <div class="loader"><div class="spinner"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ADMIN USERS ============ -->
+  <section class="dash-section" id="section-users">
+    <div class="dash-card">
+      <div class="dash-card-header">
+        <h3><i class="fas fa-users-cog"></i> Admin Users</h3>
+        <button class="btn btn-primary btn-sm-icon" onclick="openAddUserModal()">
+          <i class="fas fa-user-plus"></i> Add User
+        </button>
+      </div>
+      <div class="users-info-box">
+        <i class="fas fa-shield-alt"></i>
+        <p>Admin users are managed in the <strong>Users</strong> tab of your Google Sheet. Add or remove users directly from the spreadsheet. Default credentials: <code>admin / admin@123</code></p>
+        <p style="margin-top:10px;color:#e74c3c;font-weight:600;">
+          <i class="fas fa-exclamation-triangle"></i> Change the default password immediately for security!
+        </p>
+      </div>
+      <a href="#" class="btn btn-outline" onclick="openAddUserModal()" style="margin:16px 0;display:inline-flex;">
+        <i class="fas fa-key"></i> Change Admin Password
+      </a>
+    </div>
+  </section>
+
+</div><!-- /dashboard-main -->
+
+<!-- Global Modal (reused from global.js) -->
+<div class="toast" id="globalToast"></div>
+<div class="modal-overlay" id="globalModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <h3 id="modalTitle">Edit</h3>
+    <div id="modalBody"></div>
+    <div class="form-actions">
+      <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" id="modalSaveBtn" onclick="saveModalData()">
+        <i class="fas fa-save"></i> Save
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="js/global.js"></script>
+<script src="js/admin-dashboard.js"></script>
+</body>
+</html>

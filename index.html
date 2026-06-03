@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sulekh Convent School – Bareilly | Shaping Future Leaders</title>
+  <meta name="description" content="Sulekh Convent School Bareilly – Quality education with holistic development. Admissions open." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<div id="navbar-container"></div>
+
+<!-- ============================================================
+     HERO SLIDER
+     ============================================================ -->
+<section class="hero" id="heroSection">
+  <div class="hero-slides" id="heroSlides">
+    <!-- Slides injected by JS -->
+    <div class="hero-slide active" style="background: linear-gradient(135deg, #0d1f3c 0%, #1a3a6b 60%, #2a5298 100%);">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <div class="hero-badge">Welcome to</div>
+        <h1 class="hero-title">Sulekh Convent School</h1>
+        <p class="hero-sub">Shaping Future Leaders with Quality Education, Strong Values & Holistic Development in the Heart of Bareilly</p>
+        <div class="hero-btns">
+          <a href="admissions.html" class="btn btn-gold"><i class="fas fa-graduation-cap"></i> Apply for Admission</a>
+          <a href="about.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.5);color:#fff;">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider controls -->
+  <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+  <button class="slider-btn slider-next" id="sliderNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+  <div class="slider-dots" id="sliderDots"></div>
+
+  <!-- Admin: Add slide -->
+  <button class="btn-add-new" id="btnAddSlider" onclick="openAddSliderModal()" style="position:absolute;bottom:60px;right:20px;z-index:10;">
+    <i class="fas fa-plus"></i> Add Slide
+  </button>
+</section>
+
+<!-- ============================================================
+     STATS BAR
+     ============================================================ -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-num" data-target="1200">0</div>
+        <div class="stat-label">Students</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <div class="stat-num" data-target="60">0</div>
+        <div class="stat-label">Qualified Teachers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+        <div class="stat-num" data-target="200">0</div>
+        <div class="stat-label">Awards Won</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+        <div class="stat-num" data-target="25">0</div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WELCOME / ABOUT SECTION
+     ============================================================ -->
+<section class="section welcome-section">
+  <div class="container">
+    <div class="welcome-grid">
+      <div class="welcome-image-area">
+        <div class="image-frame">
+          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" alt="Sulekh Convent School" />
+          <div class="image-badge">
+            <div class="badge-num">25+</div>
+            <div class="badge-text">Years of<br>Excellence</div>
+          </div>
+        </div>
+      </div>
+      <div class="welcome-text">
+        <div class="section-header" style="text-align:left;margin-bottom:28px;">
+          <span class="badge">About Our School</span>
+          <h2 data-editable="aboutTitle" data-sheet="About" data-field="Title">Welcome to Sulekh Convent School</h2>
+        </div>
+        <p data-editable="aboutDesc1" data-sheet="About" data-field="Content">
+          Sulekh Convent School, Bareilly is dedicated to providing holistic education that nurtures intellectual curiosity, moral integrity, and creative thinking. Our experienced faculty guides every student to reach their highest potential.
+        </p>
+        <p style="margin-top:14px;" data-editable="aboutDesc2">
+          We believe in a balanced approach — combining rigorous academics with sports, arts, and character-building activities to create well-rounded individuals ready for tomorrow's challenges.
+        </p>
+        <div class="welcome-features">
+          <div class="wf-item"><i class="fas fa-check-circle"></i> CBSE / UP Board Affiliated</div>
+          <div class="wf-item"><i class="fas fa-check-circle"></i> Modern Laboratories & Library</div>
+          <div class="wf-item"><i class="fas fa-check-circle"></i> Sports & Extra-curricular Activities</div>
+          <div class="wf-item"><i class="fas fa-check-circle"></i> Experienced & Dedicated Faculty</div>
+        </div>
+        <div style="display:flex;gap:14px;margin-top:28px;flex-wrap:wrap;">
+          <a href="about.html" class="btn btn-primary"><i class="fas fa-info-circle"></i> Read More</a>
+          <a href="contact.html" class="btn btn-outline"><i class="fas fa-phone"></i> Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     NOTICE BOARD (Dynamic)
+     ============================================================ -->
+<section class="section section-alt notice-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Latest Updates</span>
+      <h2>Notice Board</h2>
+      <p>Stay updated with the latest announcements, circulars, and school news.</p>
+    </div>
+
+    <button class="btn-add-new" id="btnAddNotice" onclick="openAddNoticeModal()">
+      <i class="fas fa-plus"></i> Add Notice
+    </button>
+
+    <div class="notice-board-grid">
+      <!-- Left: scrolling ticker -->
+      <div class="notice-ticker-wrap">
+        <div class="ticker-header">
+          <i class="fas fa-bullhorn"></i> Live Updates
+        </div>
+        <div class="notice-ticker" id="noticeTicker">
+          <div class="loader"><div class="spinner"></div></div>
+        </div>
+      </div>
+      <!-- Right: notice cards -->
+      <div class="notice-cards" id="noticeCards">
+        <div class="loader"><div class="spinner"></div></div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:30px;">
+      <a href="noticeboard.html" class="btn btn-outline">View All Notices <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ACADEMICS HIGHLIGHTS
+     ============================================================ -->
+<section class="section academics-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Academics</span>
+      <h2>Excellence in Education</h2>
+      <p>We offer a comprehensive curriculum from Nursery to Class XII, focused on all-round development.</p>
+    </div>
+    <div class="academics-grid" id="academicsGrid">
+      <!-- Static cards (admin can edit via academics page) -->
+      <div class="ac-card reveal">
+        <div class="ac-icon"><i class="fas fa-book-open"></i></div>
+        <h3>Nursery & Primary</h3>
+        <p>Fun-based learning with activity-based curriculum to build strong foundations from an early age.</p>
+        <a href="academics.html#classes" class="ac-link">Know More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="ac-card reveal">
+        <div class="ac-icon"><i class="fas fa-flask"></i></div>
+        <h3>Middle School</h3>
+        <p>Conceptual understanding with Science, Maths, Social Studies and Language development.</p>
+        <a href="academics.html#classes" class="ac-link">Know More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="ac-card reveal">
+        <div class="ac-icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3>Senior Secondary</h3>
+        <p>Science, Commerce & Arts streams with expert faculty preparing students for board exams & beyond.</p>
+        <a href="academics.html#classes" class="ac-link">Know More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="ac-card reveal">
+        <div class="ac-icon"><i class="fas fa-palette"></i></div>
+        <h3>Co-curricular</h3>
+        <p>Sports, Music, Art, Dance, Debate and NCC/Scouts for all-round personality development.</p>
+        <a href="academics.html#activities" class="ac-link">Know More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRINCIPAL'S MESSAGE
+     ============================================================ -->
+<section class="section section-alt principal-section">
+  <div class="container">
+    <div class="principal-grid">
+      <div class="principal-img-area">
+        <div class="principal-frame">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" alt="Principal" id="principalPhoto" />
+        </div>
+      </div>
+      <div class="principal-msg">
+        <div class="section-header" style="text-align:left;margin-bottom:20px;">
+          <span class="badge">Message From</span>
+          <h2>Principal's Desk</h2>
+        </div>
+        <div class="quote-mark">"</div>
+        <p data-editable="principalMsg" data-sheet="About" data-field="Content">
+          At Sulekh Convent School, we strive to create an environment where every child feels valued, inspired, and empowered. Our dedicated teachers work tirelessly to ignite the spark of curiosity and love for learning in each student. We believe that education is not just about academics — it is about building character, confidence, and compassion.
+        </p>
+        <p style="margin-top:14px;" data-editable="principalMsg2">
+          We warmly welcome you to our school family and look forward to a lifelong journey of growth and excellence together.
+        </p>
+        <div class="principal-sig">
+          <strong id="principalName" data-editable="principalName">Principal's Name</strong><br>
+          <small>Principal, Sulekh Convent School</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALLERY PREVIEW (Dynamic)
+     ============================================================ -->
+<section class="section gallery-preview-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Memories</span>
+      <h2>Photo Gallery</h2>
+      <p>Glimpses of life at Sulekh Convent School — events, sports, annual day, and more.</p>
+    </div>
+    <div class="gallery-preview-grid" id="galleryPreviewGrid">
+      <div class="loader"><div class="spinner"></div></div>
+    </div>
+    <div style="text-align:center;margin-top:30px;">
+      <a href="gallery.html" class="btn btn-primary"><i class="fas fa-images"></i> View Full Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ACHIEVEMENTS
+     ============================================================ -->
+<section class="section section-alt achievements-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Pride of Our School</span>
+      <h2>Achievements & Awards</h2>
+    </div>
+    <div class="achievements-grid" id="achievementsGrid">
+      <div class="loader"><div class="spinner"></div></div>
+    </div>
+    <button class="btn-add-new" onclick="openAddAchievementModal()">
+      <i class="fas fa-plus"></i> Add Achievement
+    </button>
+  </div>
+</section>
+
+<!-- ============================================================
+     ADMISSION CTA
+     ============================================================ -->
+<section class="admission-cta">
+  <div class="container">
+    <div class="cta-content">
+      <div class="cta-text">
+        <h2>Admissions Open <span id="admissionYear">2025–26</span></h2>
+        <p data-editable="ctaText">Secure your child's future with quality education. Limited seats available. Apply now!</p>
+      </div>
+      <div class="cta-btns">
+        <a href="admissions.html" class="btn btn-gold"><i class="fas fa-file-alt"></i> Apply Now</a>
+        <a href="contact.html" class="btn" style="background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.3);">
+          <i class="fas fa-phone"></i> Call Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<div id="footer-container"></div>
+
+<script src="js/global.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
